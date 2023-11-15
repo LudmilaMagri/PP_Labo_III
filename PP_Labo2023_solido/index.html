@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Halloween</title>
+
+     <!-- El atributo 'defer' es para que lo llame una vez que ya se renderizó el html -->
+     <script src="./app.js" type="module" defer></script>
+     <link href="./css/estilos.css" rel="stylesheet" defer>
+</head>
+<body>
+    <header>
+        <nav class="divCabecera">  
+            <ul id="lista-cabecera">
+                <li class="item-lista-cabecera">Home</li>
+                <li class="item-lista-cabecera"><a href="cards.html" target="_self" rel="noopener noreferrer nofollow">Monstruos</a></li>
+                <li class="item-lista-cabecera">Blog</li>
+                <li class="item-lista-cabecera">Contacto</li>
+            </ul>
+            <a id="logo-principal" href="cards.html" target="_self" rel="noopener noreferrer nofollow"> <img class="logoPrincipalImg" src="./media/icons/house.png"Foto del logo principal"></a>
+            <label class="tituloPrincipal">Halloween</label> 
+        </nav>
+    </header>
+    <div>
+        <h1 class ="tituloBienvenida">Bienvenidos</h1>
+    </div>
+
+
+
+    <!--                                                              
+
+    -->
+    <section class ="form-container">
+        <fieldset class ="fieldset-form">
+            <label class ="infoLabel-form"> Información del Monstruo </label>
+
+            <form>
+                    <img class ="iconoImg" src="./media/icons/nombre2.png" alt="imagen del nombre">
+                    <label class ="labelForm" >Nombre</label>
+                <p>
+                    <input id="txtBoxNombre" class="nombreBox" type="text" name="Nombre" placeholder="Ingrese nombre" autocomplete="off">
+                </p>
+
+                <img class ="iconoImg" src="./media/icons/alias.png" alt="imagen del alias">
+                <label class ="labelForm">Alias</label>
+                <p>
+                    <input id="txtBoxAlias" class="aliasBox" type="text" name="Alias" placeholder="Ingrese alias" autocomplete="off">
+                </p>
+
+                <img class ="iconoImg" src="./media/icons/defensa.png" alt="imagen de defensa">
+                <label class="labelForm">Defensa</label> 
+                    <p id="pRadioButtonForm">
+                        <input id="radioBtnTipoEstaca" class="multipleChoice" type="radio" name="Defensa" value="Estaca" checked>
+                        <label class="labelMultipleChoise-form" id="labelEstacaRadioButton">Estaca</label>
+
+                        <input id="radioBtnTipoPlata" class="multipleChoice" type="radio" name="Defensa" value="Plata">
+                        <label class="labelMultipleChoise-form" id="labelPlataRadioButton">Plata</label>
+                        
+                        <input id="radioBtnTipoCrucifijo" class="multipleChoice" type="radio" name="Defensa" value="Crucifijo">
+                        <label class="labelMultipleChoise-form" id="labelCrucifijoRadioButton">Crucifijo</label>
+                        
+                        <input id="radioBtnTipoPosion" class="multipleChoice" type="radio" name="Defensa" value="Posion">
+                        <label class="labelMultipleChoise-form" id="labelPosionRadioButton">Posion</label>
+                        
+                    </p>
+
+                <img class ="iconoImg" src="./media/icons/miedo.png" alt="imagen de miedo">
+                <label class ="labelForm">Miedo</label>
+                <p class = "rangeContenedor">
+                    <input id="rangeMiedo" class="miedoRange" type="range" name="Miedo" min = "0" max = "100">
+                </p>
+
+                <img class ="iconoImg" src="./media/icons/tipo.png" alt="imagen de Tipo">
+                <label class ="labelForm">Tipo</label>
+                <p >
+                    <select id= "selectTipo" name = "Tipo" class = "tipoOpcion">
+                    <option value ="Esqueleto">Esqueleto</option>
+                    <option value ="Zombie">Zombie</option>
+                    <option value ="Vampiro">Vampiro</option>
+                    <option value ="Fantasma">Fantasma</option>
+                    <option value ="Bruja">Bruja</option>
+                    <option value ="Hombre lobo">Hombre lobo</option>
+                    </select>
+
+                </p>
+                <p>
+                    <input class="BtnGuardar" type="submit" name="AccionGuardarPublicacion" value="Guardar" >
+                </p>
+                    
+
+            </form>
+        </fieldset>
+
+        <div class="spinner" id="divSpinner">
+            <label class="labelForm">Cargando información... </label> 
+            <img id="loader" src="./media/loader.gif" alt="Loader de pagina">
+        </div>
+
+        <section>
+           
+                <fieldset class="fieldset-botones-tabla">
+                    <div id = "table" class = "table" hidden> </div>
+                    <div id ="botones-tabla" class="div-botones-tabla" hidden>
+                        <input id="BtnEliminar" class="BtnEliminar" type="button" name="AccionEliminarPublicacion" value="Eliminar">
+                        <input id="BtnModificar" class="BtnModificar" type="button" name="AccionModificarPublicacion" value="Modificar">
+                        <input id="BtnCancelar" class="BtnCancelar" type="button" name="AccionCancelarPublicacion" value="Cancelar">
+                    </div>
+                </fieldset>
+    
+                </div>
+        </section>
+        
+
+    
+        <div class="divFooter">  
+            <ul id="lista-footer">
+                <li class="item-lista-despedida">Home</li>
+                <li class="item-lista-despedida">Personajes</li>
+                <li class="item-lista-despedida">Blog</li>
+                <li class="item-lista-despedida">Contacto</li>
+            </ul>
+            <div>
+                <p id="parrafo-footer">Laboratorio III - Todos los derechos reservados 2023. © </p>
+
+            </div>
+        </div>
+
+
+
+
+
+</body>
+</html>
